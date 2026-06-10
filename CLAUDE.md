@@ -19,6 +19,17 @@ streamlit run app.py
 
 No build step, no test suite, no linter configured.
 
+## GitHub
+
+Repository: https://github.com/rodellobr/acoes-2025
+
+**Auto-sync:** Every file change Claude makes is automatically committed and pushed to GitHub via a PostToolUse hook configured in `.claude/settings.json`. No manual `git push` needed.
+
+The hook runs after every `Write` or `Edit` tool call:
+1. `git add -A` — stages all changes
+2. Checks for staged changes
+3. If changes exist: `git commit -m "auto-update: <timestamp>"` + `git push`
+
 ## Architecture
 
 Single-file app: `acoes-2025/app.py`.
