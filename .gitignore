@@ -1,0 +1,16 @@
+# Sensitive files
+Personal Acces Token.jpg
+*.jpg
+*.png
+*.jpeg
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Claude Code internal
+.claude/settings.local.json
